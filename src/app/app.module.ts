@@ -13,8 +13,6 @@ import { DataTableYatuComponent } from './data-table-yatu/data-table-yatu.compon
 import { MaterialNavYatuComponent } from './material-nav-yatu/material-nav-yatu.component';
 import { LayoutModule } from '@angular/cdk/layout';
 
-import { SidenavService } from './sidenav.service';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +35,7 @@ import { SidenavService } from './sidenav.service';
 	MatIconModule,
 	MatListModule
   ],
-  providers: [ SidenavService ],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

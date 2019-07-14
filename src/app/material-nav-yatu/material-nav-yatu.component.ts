@@ -3,7 +3,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-
+import { MatSidenav } from '@angular/material';
 
 @Component({
   selector: 'material-nav-yatu',
@@ -18,8 +18,13 @@ export class MaterialNavYatuComponent {
 		.observe(this.customHandSet)
 		.pipe(map(result => result.matches));
 	
-	constructor(private breakpointObserver: BreakpointObserver){		
-	}
+	@ViewChild('sidenav', {static:false}) public sidenav: MatSidenav;
 	
+	constructor(private breakpointObserver: BreakpointObserver){}
+	
+	close() {
+		this.sidenav.close();
+		console.log('tried close');
+	}
 
 }

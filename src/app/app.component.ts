@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 //import { UsuariosService } from './usuarios.service';
 //import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { SidenavService } from './sidenav.service';
-import { MatSidenav } from '@angular/material';
 
 @Component({
   selector: 'app-root',
@@ -23,20 +21,4 @@ export class AppComponent {
 	//	userName: new FormControl('', [Validators.required]),
 	//	userPassword: new FormControl('', [Validators.required])
 	//});
-	
-	
-	constructor(private sidenav: SidenavService){		
-	}
-	
-	toggleActive:boolean = false;
-	
-	toggleSidenav() {
-		this.toggleActive = !this.toggleActive;
-		this.sidenav.toggle();
-	}
-	close() {
-		this.sidenav.close();
-	}
-	
-	
 }
